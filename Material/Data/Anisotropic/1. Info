@@ -1,0 +1,41 @@
+Iron (cubic) x(1e3) [MPa] 
+C11=230, C12=135, C44=117
+Material_1 : theta_x= 0°, theta_y= 0°, theta_z= 0°;
+Material_2 : theta_x=20°, theta_y=40°, theta_z=65°;
+
+Alpha-quartz (triagonal) x(1e3) [MPa] 
+C11=87.6, C12=6.07, C13=13.3, C14=17.3, C33=106.8, C44=57.2
+Material_3: theta_x=  0°, theta_y=  0°, theta_z=  0°;
+Material_4: theta_x=-30°, theta_y=-45°, theta_z=-60°;
+
+Copper (cubic) x(1e3) [MPa] 
+C11=168, C12=121.4, C44=75.4
+Material_5 : theta_x=  0°, theta_y=  0°, theta_z=  0°;
+Material_6 : theta_x=115°, theta_y=-72°, theta_z=267°;
+
+Zinc (hcp) x(1e3) [MPa] 
+C11=165, C12=31.1, C13=50, C33=61.8, C44=33.6
+Material_7 : theta_x=   0°, theta_y=  0°, theta_z=  0°;
+Material_8 : theta_x=-125°, theta_y= 10°, theta_z=332°;
+Material_9 : theta_z=  15°, theta_x=135°, theta_z= 15°;
+
+Lamellar bone tissue (full) x(1e3) [MPa]
+C11=22.571, C12=10.326, C13= 9.451, C14= 3.051e-3, C15= 2.190e-3, C16=   -0.134;
+            C22=22.922, C23= 9.622, C24= 3.051e-3, C25=    1.947, C26=   -0.139;
+	    	  	C33=25.262, C34=-3.821e-3, C35=-1.656e-3, C36=-7.954e-2;
+				    C44=    4.954, C45=   -0.106, C46= 4.102e-3;
+						   C55=    4.833, C56=-9.525e-3;
+								  C66=    5.444;
+Material_10: theta_x=  0°, theta_y=  0°, theta_z=  0°;
+Material_11: theta_x=-30°, theta_y=-45°, theta_z=-60°;
+Material_12: theta_z= 15°, theta_x=135°, theta_z= 15°;
+
+
+
+
+
+
+
+
+
+
