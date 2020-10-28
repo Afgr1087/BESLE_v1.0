@@ -1,0 +1,93 @@
+
+regions
+cort
+trab001
+Object001
+object002
+Object003
+Object004
+Object005
+Object006
+
+HA concentration of 35% 
+
+materials
+=============================================================
+region=cort
+
+
+stiffness tensor C
+ 
+23.8319 10.3887 10.1433 0.0221 0.0205 −0.0277
+10.3887 22.4503 9.6802 0.0027 −0.0246 −0.0851
+10.1433 9.6802 26.0334 0.0029 0.0016 0.0002
+0.0221 0.0027 0.0029 5.5510 0.0122 −0.0079
+0.0205 −0.0246 0.0016 0.0122 5.6694 0.0063
+−0.0277 −0.0851 0.0002 −0.0079 0.0063 6.0325
+
+Rot Angle
+
+first rotation = phi=0 x-plane
+second rotation = tetha=335 y-plane
+===============================================================
+region trab001
+
+1.6857 −0.0031 0.3847 0.0314 0.0016 0.2109
+−0.0031 1.9570 0.4115 −0.0917 −0.0067 0.0338
+0.3847 0.4115 2.6593 0.0258 −0.0303 0.0716
+0.0314 −0.0917 0.0258 0.1979 0.0016 0.0037
+0.0016 −0.0067 −0.0303 0.0016 0.2221 −0.0057
+0.2109 0.0338 0.0716 0.0037 −0.0057 0.1828
+
+rotation is not necessary
+==============================================================
+
+region=Object001
+
+use the stiffness tensor of the "cort", first region
+
+rotation is not necessary
+==============================================================
+
+region=Object002
+
+use the stiffness tensor of the "cort", first region
+
+first rotation = phi=0 x-plane
+second rotation = tetha=335 y-plane 
+
+==============================================================
+
+region=Object003
+
+use the stiffness tensor of the "cort", first region
+
+first rotation = phi=0 x-plane
+second rotation = tetha=294 y-plane 
+
+==============================================================
+
+region=Object004
+
+use the stiffness tensor of the "cort", first region
+
+first rotation = phi=78 x-plane
+second rotation = tetha=78 y-plane 
+
+==============================================================
+
+region=Object005
+
+use the stiffness tensor of the "cort", first region
+
+first rotation = phi=66 x-plane
+second rotation = tetha=280 y-plane 
+
+==============================================================
+
+region=Object006
+
+use the stiffness tensor of the "cort", first region
+
+first rotation = phi=354 x-plane
+second rotation = tetha=60 y-plane 

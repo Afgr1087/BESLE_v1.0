@@ -1,0 +1,9 @@
+Material_1 : E =   1, ni = 0.0
+Material_2 : E =   1, ni = 0.3
+Material_3 : E =  10, ni = 0.3  [x10³ MPa]
+Material_4 : E = 210, ni = 0.0  [x10⁹  Pa]
+Material_5 : E = 210, ni = 0.3  [x10⁹  Pa]
+Material_6 : E = 210, ni = 0.0  [x10³ MPa]
+Material_7 : E = 210, ni = 0.3  [x10³ MPa]
+Material_8 : E =   5, ni = 0.3  [x10³ MPa]
+Material_9 : E = 200, ni = 0.0  [x10³ MPa]
