@@ -1,0 +1,162 @@
+regions
+Object5                                 0  
+trab001 rotation is not necessary       11  
+Object1 rotation is not necessary       1 
+object7                                 2
+Object8                                 3
+Object9                                 4
+Object10                                5
+Object11                                6
+trab002 rotation is not necessary       11
+Object2 rotation is not necessary       1 
+Object4                                 7
+Object3                                 8
+Object6                                 9
+Object12                                10
+Object13 rotation is not necessary      1
+
+
+HA concentration of 35% 
+
+materials
+=============================================================
+region=Object5
+
+
+stiffness tensor C
+ 
+23.8319 10.3887 10.1433 0.0221 0.0205 −0.0277
+10.3887 22.4503 9.6802 0.0027 −0.0246 −0.0851
+10.1433 9.6802 26.0334 0.0029 0.0016 0.0002
+0.0221 0.0027 0.0029 5.5510 0.0122 −0.0079
+0.0205 −0.0246 0.0016 0.0122 5.6694 0.0063
+−0.0277 −0.0851 0.0002 −0.0079 0.0063 6.0325
+
+Rot Angle
+
+first rotation = phi=0 x-plane
+second rotation = tetha=335 y-plane
+===============================================================
+region trab001
+
+0.3822	0.0955	0.0955	0	0	0
+0.0955	0.3822	0.0955	0	0	0
+0.0955	0.0955	0.3822	0	0	0
+0	0	0	0.1433	0	0
+0	0	0	0	0.1433	0
+0	0	0	0	0	0.1433
+
+rotation is not necessary
+==============================================================
+
+region=Object001
+
+use the stiffness tensor of the "Object5", first region
+
+rotation is not necessary
+==============================================================
+
+region=Object7
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=0 x-plane
+second rotation = tetha=294 y-plane 
+
+==============================================================
+
+region=Object8
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=78 x-plane
+second rotation = tetha=78 y-plane 
+
+==============================================================
+
+region=Object9
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=66 x-plane
+second rotation = tetha=280 y-plane 
+
+==============================================================
+
+region=Object10
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=17 x-plane
+second rotation = tetha=67 y-plane 
+
+==============================================================
+
+region=Object11
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=354 x-plane
+second rotation = tetha=60 y-plane 
+
+==============================================================
+
+region=trab002 
+
+use the stiffness tensor of the "trab001", second region
+
+rotation is not necessary
+==============================================================
+
+region=Object2
+
+use the stiffness tensor of the "Object5", first region
+
+rotation is not necessary
+==============================================================
+
+region=Object4
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=290 x-plane
+second rotation = tetha=67 y-plane 
+
+==============================================================
+
+region=Object3
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=85 x-plane
+second rotation = tetha=86 y-plane 
+
+==============================================================
+
+region=Object6
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=74 x-plane
+second rotation = tetha=71 y-plane 
+
+==============================================================
+
+region=Object12
+
+use the stiffness tensor of the "Object5", first region
+
+first rotation = phi=277 x-plane
+second rotation = tetha=68 y-plane 
+
+==============================================================
+
+
+region=Object13
+
+use the stiffness tensor of the "Object5", first region
+
+rotation is not necessary
+==============================================================
+
+
