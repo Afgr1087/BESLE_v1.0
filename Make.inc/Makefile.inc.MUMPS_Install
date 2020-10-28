@@ -1,0 +1,65 @@
+#
+#  This file is part of MUMPS 5.2.1, released
+#  on Thu Apr 18 09:55:07 UTC 2019
+#
+# These settings for a PC under Debian/linux with standard packages :
+# metis (parmetis), scotch (ptscotch), openmpi, gfortran
+
+# Begin orderings
+LSCOTCHDIR = ../scotch/lib/
+ISCOTCH   = -I../scotch/include
+LSCOTCH   = -L$(LSCOTCHDIR) -lesmumps -lptesmumps -lscotch -lscotcherr -lptscotch -lptscotcherr
+
+LPORDDIR = $(topdir)/PORD/lib/
+IPORD    = -I$(topdir)/PORD/include/
+LPORD    = -L$(LPORDDIR) -lpord
+
+LMETISDIR = ../scotch/lib/
+LMETIS    = -L$(LMETISDIR) -lptscotchparmetis -lscotchmetis
+
+
+# Corresponding variables reused later
+ORDERINGSF = -Dscotchmetis -Dpord -Dptscotchparmetis -Dscotch -Dptscotch
+ORDERINGSC  = $(ORDERINGSF)
+
+LORDERINGS = $(LMETIS) $(LPORD) $(LSCOTCH)
+IORDERINGSF = $(ISCOTCH) 
+IORDERINGSC = $(IPORD) $(ISCOTCH)
+# End orderings
+################################################################################
+
+PLAT    =
+LIBEXT  = .a
+OUTC    = -o 
+OUTF    = -o 
+RM = /bin/rm -f
+CC = mpicc
+FC = mpif90
+FL = mpif90
+AR = ar vr 
+RANLIB = ranlib
+LAPACK = -llapack
+SCALAP  = -L../scalapack/ -lscalapack
+
+INCPAR = # not needed with mpif90/mpicc:  -I/usr/include/openmpi
+
+LIBPAR = $(SCALAP) $(LAPACK) # not needed with mpif90/mpicc: -lmpi_mpifh -lmpi
+
+INCSEQ = -I$(topdir)/libseq
+LIBSEQ  = $(LAPACK) -L$(topdir)/libseq -lmpiseq
+
+LIBBLAS = -lblas
+LIBOTHERS = -lpthread
+
+#Preprocessor defs for calling Fortran from C (-DAdd_ or -DAdd__ or -DUPPER)
+CDEFS   = -DAdd_
+
+#Begin Optimized options
+OPTF    = -O -fopenmp -fno-range-check 
+OPTL    = -O -fopenmp
+OPTC    = -O -fopenmp -DPORD_INTSIZE64
+#End Optimized options
+ 
+INCS = $(INCPAR)
+LIBS = $(LIBPAR)
+LIBSEQNEEDED =

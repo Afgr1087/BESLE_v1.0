@@ -1,0 +1,38 @@
+#
+#  This file is part of MUMPS 5.2.0, released
+#  on Thu Apr 18 09:55:07 UTC 2019
+#
+# These settings for a PC under Debian/linux with standard packages :
+# metis (parmetis), scotch (ptscotch), openmpi, gfortran
+
+# packages installation : 
+# apt-get install libmetis-dev libparmetis-dev libscotch-dev libptscotch-dev libatlas-base-dev openmpi-bin libopenmpi-dev lapack-dev
+
+# Begin orderings
+
+LSCOTCHDIR = $(topdir)/scotch/lib/
+LSCOTCH   = -L$(LSCOTCHDIR) -lesmumps -lptesmumps -lscotch -lscotcherr -lptscotch -lptscotcherr
+
+LPORDDIR = $(topdir)/PORD/lib/
+LPORD    = -L$(LPORDDIR) -lpord
+
+LMETISDIR = $(topdir)/scotch/lib/ 
+LMETIS    = -L$(LMETISDIR) -lptscotchparmetis -lscotchmetis
+
+LORDERINGS = $(LMETIS) $(LPORD) $(LSCOTCH)
+# End orderings
+################################################################################
+
+PLAT    =
+LIBEXT  = .a
+
+LAPACK = -llapack
+SCALAP = -L$(topdir)/scalapack/ -lscalapack
+
+LIBPAR = $(SCALAP) $(LAPACK) # not needed with mpif90/mpicc: -lmpi_mpifh -lmpi
+
+LIBBLAS = -lblas
+LIBOTHERS = -lpthread
+
+LIBS = $(LIBPAR)
+
