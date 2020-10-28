@@ -1,0 +1,122 @@
+This software must be installed in a Ubuntu distribution. In order to use the parallel 
+(distributed memory MPI based) application you need:
+
+-> OpenMPI
+
+It is recommended to install "libopenmpi-dev" using the Synaptic Package Manager. Or via terminal with:
+
+% sudo apt-get install libopenmpi-dev
+
+An additional option is MPICH using
+
+% sudo apt-get install mpich
+
+-> BLAS, LAPACK an zlib1g libraries with:
+
+% sudo apt-get install libblas-dev liblapack-dev zlib1g-dev
+
+-> MUMPS: a parallel sparse direct solver, you need to fill the 
+download request submission:
+
+http://mumps.enseeiht.fr
+
+the folder MUMPS must be renamed simply as MUMPS/ and added within the BESLE/ root. According 
+to the installation instructions of MUMPS, it is necessary the latest released versions of 
+ScaLAPACK and SCOTCH libraries. Both must be renamed simply as scotch/ and scalapack/, respectively.
+These packages must be added to the BESLE/MUMPS/ root.
+
+-> SCOTCH: you can find this library in:
+
+https://gforge.inria.fr/projects/scotch/
+
+In order to install the SCOTCH library, you need to take the Makefile.inc.scotch
+from the BESLE/Make.inc folder. Copy and paste it into BESLE/MUMPS/scotch/src/ 
+with the Makefile.inc name. Then, install with:
+
+% ~/BESLE/scotch/src$ make ptscotch
+% ~/BESLE/scotch/src$ make scotch
+% ~/BESLE/scotch/src$ make esmumps
+% ~/BESLE/scotch/src$ make ptesmumps
+
+ptscotch might require to specified the root of "mpi.h" at line 123 in the common.h file located 
+in the scotch_6.0.9/src/libscotch folder. Usually, the root is:
+
+#include </usr/include/mpi/mpi.h>
+
+This depends on the computer and the user must verify the root.
+
+-> ScaLAPACK: you can find this library in:
+
+http://www.netlib.org/scalapack/
+
+In order to install the ScaLAPACK library, you need to take the SLmake.inc.scalapack
+from the BESLE/Make.inc folder, copy and paste it into BESLE/MUMPS/scalapack/
+with SLmake.inc name. Then, install with:
+
+% ~/BESLE/scalapack$ make
+
+In order to install the MUMPS solver, you need to take the Makefile.inc.MUMPS_Install
+from the BESLE/Makefile.inc folder, copy and paste it into BESLE/MUMPS/
+with the Makefile.inc name. Then, install with:
+
+% ~/BESLE/MUMPS$ make all
+
+Finally, take the Makefile.inc.MUMPS_run from the BESLE/Make.inc folder, copy and paste
+it into BESLE/MUMPS/ with the Makefile.inc name. 
+
+You need to build the BESLE application with
+
+% ~/BESLE$ make
+
+Installation completed !
+
+----------------------------------------------------------------------------------------------------
+POLYCRYSTAL AGGREGATES
+----------------------------------------------------------------------------------------------------
+
+In order to simulate the mechanical behavior of polycrystalline materials, a mesh generator
+is provided in BESLE/Mesh/Polycrystal, the code requires the previous installation
+of the Voro++ to generate the crystalline structure, it can be found in:
+
+http://math.lbl.gov/voro++/
+
+you need to download the latest released version, in this case, change the folder name simply as voro++/
+and add it to the BESLE/Mesh/Polycrystal/ root. Now, you can install the voro++ using:
+
+% ~/BESLE/Mesh/Polycrystal/voro++$ make
+% ~/BESLE/Mesh/Polycrystal/voro++$ sudo make install
+
+Next, the discretization of each aggregate is carried out using the Triangle mesh generator, you 
+can download it on:
+
+https://www.cs.cmu.edu/~quake/triangle.html
+
+you just need to add the folder triangle to BESLE/Mesh/Polycrystal/ directory. Then, you can 
+Build the application with:
+
+% ~/BESLE/Mesh/Polycrystal$ make
+
+Installation completed !
+
+-----------------------------------------------------------------------------------
+
+Acknowledgments
+===============
+The authors would like to thank to the University of Campinas (Brazil), Brunel University London (UK), 
+and the University of Portsmouth (UK) for the facilities and structure provided to develop this version 
+of BESLE. The project was funded by the National Council for Scientific and Technological Development 
+CNPq (Grant Numbers: 312493/2013-4, 154283/2014-2 and 312536/2017-8), and the Brazilian Coordination for 
+the Improvement of Higher Education Personnel CAPES (Grant Number: 435214/2019-01). 
+
+Luiz C. Wrobel also thanks the CNPq for his personal financial support (Grant Number: 303770/2019-8).
+
+This material is based upon work supported by the Air Force Office of Scientific 
+Research-AFOSR under Award Numbers FA9550-18-1-0113 and FA9550-20-1-0133.
+
+Computational sources were provided by the Center for Computational Engineering and Science-CCES 
+at the University of Campinas funded by the Sao Paulo Research Foundation FAPESP (Grant Number: 2013/08293-7).
+
+
+====================================================================================================
+
+====================================================================================================
