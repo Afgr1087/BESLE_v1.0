@@ -195,7 +195,7 @@
         WRITE(*,'(A,F15.3,A)') '                                  ...COMPLETED! (Time :',time,'s)'
         WRITE (*,*) ''
       END IF
-      CALL MPI_Bcast(time,1,MPI_INTEGER,root,MPI_COMM_WORLD,IERR)
+      CALL MPI_Bcast(time,1,MPI_DOUBLE,root,MPI_COMM_WORLD,IERR)
       !---------------------------------------------------------------------------------
 
       END SUBROUTINE Solver_MUMPS
