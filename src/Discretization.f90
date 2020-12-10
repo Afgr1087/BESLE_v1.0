@@ -735,7 +735,7 @@ SUBROUTINE Subregions_Interfaces(nt,me,time)
         END IF
 
     END IF
-    CALL MPI_Bcast(time,1,MPI_INTEGER,root,MPI_COMM_WORLD,mpierr)
+    CALL MPI_Bcast(time,1,MPI_DOUBLE,root,MPI_COMM_WORLD,mpierr)
     !---------------------------------------------------------------------------------
 
 END SUBROUTINE Subregions_Interfaces
