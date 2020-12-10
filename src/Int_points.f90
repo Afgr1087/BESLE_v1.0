@@ -396,7 +396,7 @@ SUBROUTINE calc_pts_node(node,N_nsc,Tri_Quad)
      X9 =  (/0.d0           ,            0.d0/);   X10 = (/0.d0            ,            1.d0/);
      X11 = (/2*lambda-0.05d0, 1.05d0-2*lambda/);   X12 = (/0.d0            , 1.05d0-2*lambda/);
      X13 = (/lambda         ,   1.d0-2*lambda/);   X14 = (/0.d0            , 0.95d0-2*lambda/);     
-     X15 = (/0.95d0-2*lambda, 0.05d0+2*lambda/);   X16 = (/0.d0            , 0.75d0-2*lambda/);
+     X15 = (/0.05d0+2*lambda, 0.95d0-2*lambda/);   X16 = (/0.d0            , 0.75d0-2*lambda/);
      X17 = (/2*lambda+0.25d0, 0.75d0-2*lambda/);   X18 = (/lambda          ,          lambda/);
      X19 = (/lambda+0.05d0  ,            0.d0/);   X20 = (/lambda+0.05d0   ,    lambda+0.05d0/);   
      X21 = (/0.d0           ,   lambda+0.05d0/);   X22 = (/lambda+0.25d0   ,            0.d0/);
