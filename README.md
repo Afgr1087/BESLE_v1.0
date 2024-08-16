@@ -8,7 +8,7 @@ By Dr. Andres F. Galvis, FHEA, MIET
 
 Collaborators:
 
-Software Module Developers: 
+Module Developer collaborators: 
 Dr. Daniel Prada and Dr. Juan E. Alvarez 
 
 Department of Computational Mechanics
