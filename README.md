@@ -4,7 +4,11 @@ A MPI-parallelized Fortran 3D
 
 Boundary Element Software for 3D Linear Elasticity
 
-By Andres F. Galvis 
+By Dr. Andres F. Galvis, FHEA, MIET 
+
+Software Module Developers: 
+Dr. Daniel Prada 
+Dr. Juan E. Alvarez 
 
 Department of Computational Mechanics
 
