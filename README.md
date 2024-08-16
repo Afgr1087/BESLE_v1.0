@@ -7,8 +7,7 @@ Boundary Element Software for 3D Linear Elasticity
 By Dr. Andres F. Galvis, FHEA, MIET 
 
 Software Module Developers: 
-Dr. Daniel Prada 
-Dr. Juan E. Alvarez 
+Dr. Daniel Prada and Dr. Juan E. Alvarez 
 
 Department of Computational Mechanics
 
