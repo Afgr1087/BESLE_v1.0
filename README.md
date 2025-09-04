@@ -1,56 +1,39 @@
-# BESLE_v1.0
+# BESLE_v2.0
 
 A MPI-parallelized Fortran 3D
 
 Boundary Element Software for 3D Linear Elasticity
 
-By Dr. Andres F. Galvis, FHEA, MIET 
+By Andres F. Galvis
 
-Collaborators:
+School of Electrical & Mechanical Engineering
 
-Module Developer collaborators: 
-Dr. Daniel Prada and Dr. Juan E. Alvarez 
+Faculty of Technology
 
-Department of Computational Mechanics
+University of Portsmouth
 
-School of Mechanical Engineering
-
-University of Campinas
-
-09/10/2020
+03/09/2025
 
 ====================================================================================================
 
-BESLE is a software for carrying out 3D simulations of solids under 
-quasi-static, inertial and high-rate boundary conditions for transient 
-analysis. It uses the 3D elastostatic and dynamic boundary element formulation
-with the fundamental solution based on double Fourier series. The software 
-supports simulations of isotropic and anisotropic bodies considering, if 
-necessary, several domains for modeling heterogeneous materials composed of 
-different constituents. A distinguishing feature of the BESLE is that it 
-carries out customized solid simulations in a straightforward configuration 
-using only the surface mesh information. The software accounts with external 
-sub-package for creating a material database, several options for mesh generation, 
-diverse ways for the configuration of the boundary conditions. 
+-v1.0: Andres F. Galvis, Daniel M. Prada, Lucas S. Moura, Cecilia Zavaglia, Jamie
+	   M. Foster, Paulo Sollero, and Luiz C. Wrobel. First released software, and
+	   original paper publication.
+ 
+-v2.0: Andres F. Galvis, and Rahim Si Hadj Mohand. In this version, a new and
+	   easy installation procedure is incorporated for: i) online (dependencies are
+	   downloaded from repositories), and ii) standalone (dependencies are included).
+	   New Version Announcement (NVA).	
 
-BESLE is composed by various Fortran 90 modules that can be compiled and 
-modified from a Setup subroutine utility that is configured following the 
-instruction provided in the User's Guide. This software employs external free
-codes and software such as MUMPS, ScaLAPACK, SCOTCH, BLAS, LAPACK, Voro++ and 
-triangle. The user must download and install them according to the instruction 
-given in the INSTALL file. In order to run the different examples shown in the 
-use User's Guide, this application requires the previous installation of MPICH2.
-Moreover, this software accounts only with a parallel version, therefore, at least
-2 threads must be indicated by the execution. For simulations with a large number
-of degrees of freedom, MUMPS is installed in its 64-bit version.
+====================================================================================================
 
-Please read this README file and the documentation for a complete list of 
-functionalities. Documentation and publications related to BESLE can also 
-be found at https://github.com/Afgr1087/BESLE_v1.0.git. Please refer to INSTALL 
-for installation instructions.
+BESLE is a software for carrying out 3D simulations of solids under quasi-static, inertial and high-rate boundary conditions for transient analysis. It uses the 3D elastostatic and dynamic boundary element formulation with the fundamental solution based on double Fourier series. The software supports simulations of isotropic and anisotropic bodies considering, if necessary, several domains for modeling heterogeneous materials composed of different constituents. A distinguishing feature of the BESLE is that it carries out customized solid simulations in a straightforward configuration using only the surface mesh information. The software accounts with external sub-package for creating a material database, several options for mesh generation, diverse ways for the configuration of the boundary conditions.
 
-  This version of BESLE is provided to you free of charge. It is
-  released under the GNU General Public License v3.0.
+BESLE is composed by various Fortran 90 modules that can be compiled and modified from a Setup subroutine utility that is configured following the instruction provided in the User's Guide. This software employs external free codes and software such as MUMPS, ScaLAPACK, SCOTCH, BLAS, LAPACK, Voro++ and triangle. The installer downloads, prepares, and installs all these dependencies. The user must follow the instructions provided in the INSTALL file. In order to run the different examples shown in the use User's Guide, this application requires the previous installation of MPI. Moreover, this software accounts only with a parallel version, therefore, at least 2 threads must be indicated by the execution.
+
+Please read this README file and the documentation for a complete list of functionalities. Documentation and publications related to BESLE can also be found at https://github.com/GalvisA1087/BESLE_v2.0.git. Please refer to INSTALL for installation instructions.
+
+This version of BESLE is provided to you free of charge. It is released under the GNU General Public License v3.0.
 
 
 Contents:
@@ -83,24 +66,19 @@ Examples/	 contains the mesh, material, and simulation examples.
 Additional contents after installation:
 -----------------------------------------------------------------------------------
 
-MUMPS/		The MUMPS solver must be installed in its 64-bit version	
+MUMPS/ The MUMPS solver must be installed in its 64-bit version
 
-Polycrystal/voro++/ 	3D Voronoi structure generator.
+Polycrystal/voro++/ 3D Voronoi structure generator.
 
-Polycrystal/triangle/	two-dimensional quality mesh generator and Delaunay triangulator.
+Polycrystal/triangle/ two-dimensional quality mesh generator and Delaunay triangulator.
 
+The libraries voro++ and triangle libraries are installed during the BESLE compilation just in case the user wants to reproduce artificial polycrystalline structures. After BESLE compilation, temporary folders are generated as follows.
 
-The libraries voro++ and triangle have to be installed in case the user wants to
-reproduce artificial polycrystalline structures. If it is not the case, their 
-installation could be skipped. After BESLE compilation, temporary folders are generated 
-as follows.
+obj/ contains the *.o and *.mod files produced by the general compilation of BESLE.
 
-obj/ 	contains the *.o and *.mod files produced by the general compilation of BESLE.
+OOC/ is the folder that MUMPS uses to write data while the system of equations is being solved. After a success solution, MUMPS deletes these files itself.
 
-OOC/	is the folder that MUMPS uses to write data while the system of equations is 
-		being solved. After a success solution, MUMPS deletes these files itself.
-
-Results/	contains the .vtk files for visualization using Paraview.
+Results/ contains the .vtk files for visualization using Paraview.
 
 -----------------------------------------------------------------------------------
 
@@ -118,6 +96,8 @@ Research-AFOSR under Award Numbers FA9550-18-1-0113 and FA9550-20-1-0133.
 Andres F. Galvis was supported by the EPSRC New Investigator Award "Multiscale modelling of mechanical deterioration in lithium-ion batteries" Grant number EP/T000775/1.
 
 Luiz C. Wrobel also thanks the CNPq for his personal financial support (Grant Number: 303770/2019-8).
+
+Rahim Si Hadj Mohand was supported by Directorate-General for Scientific Research and Technological Development (DG-RSDT) of Algerian government in the form of research grant.
 
 Computational sources were provided by the Center for Computational Engineering and Science-CCES 
 at the University of Campinas funded by the Sao Paulo Research Foundation FAPESP (Grant Number: 2013/08293-7).
