@@ -1,4 +1,4 @@
-# BESLE_v2.0
+# BESLE_v2.0 Now Released!!
 
 A MPI-parallelized Fortran 3D
 
