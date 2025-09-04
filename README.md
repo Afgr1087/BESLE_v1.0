@@ -14,7 +14,7 @@ University of Portsmouth
 
 03/09/2025
 
-===========================================================================================
+======================================================================================
 
 -v1.0: Andres F. Galvis, Daniel M. Prada, Lucas S. Moura, Cecilia Zavaglia, Jamie
 	   M. Foster, Paulo Sollero, and Luiz C. Wrobel. First released software, and
@@ -25,7 +25,7 @@ University of Portsmouth
 	   downloaded from repositories), and ii) standalone (dependencies are included).
 	   New Version Announcement (NVA).	
 
-===========================================================================================
+======================================================================================
 
 BESLE is a software for carrying out 3D simulations of solids under quasi-static, inertial and high-rate boundary conditions for transient analysis. It uses the 3D elastostatic and dynamic boundary element formulation with the fundamental solution based on double Fourier series. The software supports simulations of isotropic and anisotropic bodies considering, if necessary, several domains for modeling heterogeneous materials composed of different constituents. A distinguishing feature of the BESLE is that it carries out customized solid simulations in a straightforward configuration using only the surface mesh information. The software accounts with external sub-package for creating a material database, several options for mesh generation, diverse ways for the configuration of the boundary conditions.
 
@@ -102,6 +102,6 @@ Rahim Si Hadj Mohand was supported by Directorate-General for Scientific Researc
 Computational sources were provided by the Center for Computational Engineering and Science-CCES 
 at the University of Campinas funded by the Sao Paulo Research Foundation FAPESP (Grant Number: 2013/08293-7).
 
-===========================================================================================
+======================================================================================
 
 ======================================================================================
